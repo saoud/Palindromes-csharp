@@ -1,23 +1,22 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TDDcsharp;
+using Palindromes;
 
-namespace TDDcsharp.Tests
+namespace Palindromes.Tests
 {
-    [TestClass]
-    public class CarDealershipTests
-    {
-        [TestMethod]
-        public void isCar_StringEqualCarThing_True()
-        {
-            CarDealership testCarDealership = new CarDealership();
-            Assert.AreEqual(true, testCarDealership.isCar("4 wheels"));
-        }
-
-        [TestMethod]
-        public void isCar_StringNotEqualCarThings_False()
-        {
-            CarDealership testCarDealership = new CarDealership();
-            Assert.AreEqual(false, testCarDealership.isCar("horse"));
-        }
-    }
+  [TestClass] 
+	public class PalindromeTests
+	{
+		[TestMethod]
+			public void IsPalindrome_WordSpelledSameBackwardsAndForward_True()
+			{
+					Palindrome testPalindrome = new Palindrome();
+					Assert.AreEqual(true, testPalindrome.IsPalindrome("bob"));
+			}
+        // [TestMethod]
+        //     public void IsPalindrome_WordNotSpelledSameBackwardsAndForwards_False()
+        //     {
+        //         Palindrome testPalindrome = new Palindrome();
+        //         Assert.AreEqual(false, testPalindrome.IsPalindrome("joe"));
+        //     }
+	}
 }
