@@ -1,15 +1,18 @@
 using System;
+using System.Linq;
+
 namespace Palindromes
 {
   public class Palindrome
 	{
-        public bool IsPalindrome(string word)
+        public bool IsPalindrome(string stringToTest)
         {
-            string lowerWord = word.ToLower();
-            char[] letterArr = lowerWord.ToCharArray();
-            Array.Reverse(letterArr);
-            string reversed = new string(letterArr);
-            if (lowerWord == reversed)
+            string lowerWords = stringToTest.ToLower();
+            string cleanedString = String.Concat(lowerWords.Where(c => !Char.IsWhiteSpace(c)));
+            char[] cleanedStringArr = cleanedString.ToCharArray();
+            Array.Reverse(cleanedStringArr);
+            string reversed = new string(cleanedStringArr);
+            if (cleanedString == reversed)
             {
                 return true;
             }
