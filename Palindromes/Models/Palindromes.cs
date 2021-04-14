@@ -1,19 +1,21 @@
-namespace TDDcsharp
+using System;
+namespace Palindromes
 {
-    public class CarDealership
-    {
-        public bool isCar(string car)
+  public class Palindrome
+	{
+        public bool IsPalindrome(string word)
         {
-            string[] whatIsCarArray = {"car", "4 wheels", "brakes", "steering wheel"};
-            
-            foreach (string carThing in whatIsCarArray)
+            char[] letterArr = word.ToCharArray();
+            Array.Reverse(letterArr);
+            string reversed = new string(letterArr);
+            if (word == reversed)
             {
-                if(car == carThing)
-                {
-                    return true;
-                }
+                return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }
         }
-    }
+	}
 }
