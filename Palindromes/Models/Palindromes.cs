@@ -5,10 +5,11 @@ namespace Palindromes
 	{
         public bool IsPalindrome(string word)
         {
-            char[] letterArr = word.ToCharArray();
+            string lowerWord = word.ToLower();
+            char[] letterArr = lowerWord.ToCharArray();
             Array.Reverse(letterArr);
             string reversed = new string(letterArr);
-            if (word == reversed)
+            if (lowerWord == reversed)
             {
                 return true;
             }

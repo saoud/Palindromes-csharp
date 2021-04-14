@@ -18,5 +18,11 @@ namespace Palindromes.Tests
                 Palindrome testPalindrome = new Palindrome();
                 Assert.AreEqual(false, testPalindrome.IsPalindrome("joe"));
             }
+        [TestMethod]
+            public void IsPalindrome_WordSpelledSameBackwardsAndForwardsWithDifferentCases_True()
+            {
+                Palindrome testPalindrome = new Palindrome();
+                Assert.AreEqual(true, testPalindrome.IsPalindrome("Bob"));
+            }
 	}
 }
