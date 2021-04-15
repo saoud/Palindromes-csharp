@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using System.Text.RegularExpressions;
-namespace Palindromes
+namespace Palindromes.Models
 {
   public class Palindrome
 	{
